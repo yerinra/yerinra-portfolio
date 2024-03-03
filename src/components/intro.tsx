@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { useEffect } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import {
   ArrowRightIcon,
@@ -11,19 +11,13 @@ import {
   Pencil1Icon,
   FontBoldIcon,
 } from "@radix-ui/react-icons";
+
 import Link from "next/link";
-import { useInView } from "react-intersection-observer";
-import { useActiveSectionContext } from "@/context/active-section-context";
+
+import { useSectionInView } from "@/lib/hooks";
 
 export default function Intro() {
-  const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
-  const { ref, inView } = useInView({ threshold: 0.5 });
-
-  useEffect(() => {
-    if (inView && Date.now() - timeOfLastClick > 1000) {
-      setActiveSection("Home");
-    }
-  }, [inView, setActiveSection, timeOfLastClick]);
+  const { ref } = useSectionInView("Home", 0.5);
 
   return (
     <section
