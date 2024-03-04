@@ -6,7 +6,7 @@ import { validateString } from "@/lib/utils";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const sendEmail = async (formData: FormData) => {
-  const senderEmail = formData.get("email");
+  const senderEmail = formData.get("senderEmail");
   const message = formData.get("message");
 
   if (!validateString(senderEmail, 500)) {
@@ -17,11 +17,15 @@ export const sendEmail = async (formData: FormData) => {
     return { error: "Invalid message." };
   }
 
-  resend.emails.send({
-    from: "onboarding@resend.dev",
-    to: "yerinaleph@gmail.com",
-    subject: "Message from contact form",
-    reply_to: senderEmail as string,
-    text: message as string,
-  });
+  try {
+    await resend.emails.send({
+      from: "Portfolio Site Contact Form <onboarding@resend.dev>",
+      to: "yerinaleph@gmail.com",
+      subject: "Message from contact form",
+      reply_to: senderEmail as string,
+      text: message as string,
+    });
+  } catch (error) {
+    return { error: error.message };
+  }
 };
