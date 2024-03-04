@@ -15,9 +15,11 @@ import {
 import Link from "next/link";
 
 import { useSectionInView } from "@/lib/hooks";
+import { useActiveSectionContext } from "@/context/active-section-context";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   return (
     <section
@@ -74,6 +76,10 @@ export default function Intro() {
         <Link
           href="#contact"
           className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+          onClick={() => {
+            setActiveSection("Contact");
+            setTimeOfLastClick(Date.now());
+          }}
         >
           Contact me here{" "}
           <ArrowRightIcon className="opacity-70 group-hover:translate-x-1 transition" />
@@ -81,16 +87,16 @@ export default function Intro() {
 
         <a
           href="#"
-          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110  active:scale-105 transition borer border-black/10"
+          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110  active:scale-105 transition borerBlack"
           download
         >
           Download Resume{" "}
-          <DownloadIcon className="opacity-70 group-hover:translate-y-1 transition focus:scale-110 hover:scale-110  active:scale-105 borer border-black/10" />
+          <DownloadIcon className="opacity-70 group-hover:translate-y-1 transition focus:scale-110 hover:scale-110  active:scale-105 borerBlack" />
         </a>
         <a
           href="https://github.com/yerinra"
           target="_blank"
-          className="bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-[1.15] hover:text-gray-950  active:scale-[1.15] transition borer border-black/10"
+          className="bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-[1.15] hover:text-gray-950  active:scale-[1.15] transition borerBlack"
           title="LinkedIn"
         >
           <LinkedInLogoIcon />
@@ -98,7 +104,7 @@ export default function Intro() {
         <a
           href="https://github.com/yerinra"
           target="_blank"
-          className="bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-[1.15] hover:text-gray-950  active:scale-[1.15] transition borer border-black/10"
+          className="bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-[1.15] hover:text-gray-950  active:scale-[1.15] transition borerBlack"
           title="Github"
         >
           <GitHubLogoIcon />
@@ -106,7 +112,7 @@ export default function Intro() {
         <a
           href="https://yalef.tistory.com/"
           target="_blank"
-          className="bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-[1.15] hover:text-gray-950  active:scale-[1.15] transition borer border-black/10"
+          className="bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-[1.15] hover:text-gray-950  active:scale-[1.15] transition borerBlack"
           title="Tistory Blog"
         >
           <Pencil1Icon />
