@@ -1,7 +1,7 @@
 "use server";
 
 import { Resend } from "resend";
-import { validateString } from "@/lib/utils";
+import { getErrorMessage, validateString } from "@/lib/utils";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -26,6 +26,8 @@ export const sendEmail = async (formData: FormData) => {
       text: message as string,
     });
   } catch (error) {
-    return { error: error.message };
+    return {
+      error: getErrorMessage(error),
+    };
   }
 };
