@@ -1,6 +1,5 @@
 import About from "@/components/about";
 import Contact from "@/components/contact";
-import Experience from "@/components/experience";
 import Intro from "@/components/intro";
 import MiniProjects from "@/components/mini-projects";
 import Projects from "@/components/projects";

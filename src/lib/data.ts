@@ -22,21 +22,8 @@ export const links = [
     hash: "#skills",
   },
   {
-    name: "Experience",
-    hash: "#experience",
-  },
-  {
     name: "Contact",
     hash: "#contact",
-  },
-] as const;
-
-export const experiencesData = [
-  {
-    title: "제로베이스 프론트엔드 부트캠프 수료",
-    description: "제로베이스 웹 프론트엔드 과정 20기를 수료하였습니다.",
-    icon: React.createElement(RocketIcon),
-    date: "2023.06 - 2024.03",
   },
 ] as const;
 
@@ -101,10 +88,22 @@ export const skillsData = [
   "Next.js",
   "Git",
   "Github",
-  "Tailwind",
+  "Tailwindcss",
   "Prisma",
-  "MongoDB",
+  "SQLite",
   "Recoil",
+  "Redux",
+  "Zustand",
+  "React-Query",
   "Framer Motion",
   "Firebase",
+] as const;
+
+export const experiencesData = [
+  {
+    title: "제로베이스 프론트엔드 부트캠프 수료",
+    description: "제로베이스 웹 프론트엔드 과정 20기를 수료하였습니다.",
+    icon: React.createElement(RocketIcon),
+    date: "2023.06 - 2024.03",
+  },
 ] as const;

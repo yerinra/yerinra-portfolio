@@ -87,7 +87,7 @@ export default function Intro() {
 
         <a
           href="#"
-          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110  active:scale-105 transition borerBlack"
+          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110  active:scale-105 transition borerBlack dark:bg-white/10 dark:text-white/60"
           download
         >
           Download Resume{" "}
@@ -96,7 +96,7 @@ export default function Intro() {
         <a
           href="https://github.com/yerinra"
           target="_blank"
-          className="bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-[1.15] hover:text-gray-950  active:scale-[1.15] transition borerBlack"
+          className="bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-[1.15] hover:text-gray-950  active:scale-[1.15] transition borerBlack dark:bg-white/10 dark:text-white/60"
           title="LinkedIn"
         >
           <LinkedInLogoIcon />
@@ -104,7 +104,7 @@ export default function Intro() {
         <a
           href="https://github.com/yerinra"
           target="_blank"
-          className="bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-[1.15] hover:text-gray-950  active:scale-[1.15] transition borerBlack"
+          className="bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-[1.15] hover:text-gray-950  active:scale-[1.15] transition borerBlack dark:bg-white/10 dark:text-white/60"
           title="Github"
         >
           <GitHubLogoIcon />
@@ -112,7 +112,7 @@ export default function Intro() {
         <a
           href="https://yalef.tistory.com/"
           target="_blank"
-          className="bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-[1.15] hover:text-gray-950  active:scale-[1.15] transition borerBlack"
+          className="bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-[1.15] hover:text-gray-950  active:scale-[1.15] transition borerBlack dark:bg-white/10 dark:text-white/60"
           title="Tistory Blog"
         >
           <Pencil1Icon />
