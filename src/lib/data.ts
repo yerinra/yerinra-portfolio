@@ -29,7 +29,7 @@ export const links = [
 
 export const projectsData = [
   {
-    title: "BookShelf",
+    title: "bookshelf",
     description:
       "태그 별로 책들을 분류할 수 있는 온라인 책장 사이트입니다. 개인 프로젝트로 진행하였습니다.",
     tags: ["React", "TypeScript", "Tailwind", "Firebase"],
@@ -86,17 +86,19 @@ export const skillsData = [
   "TypeScript",
   "React",
   "Next.js",
+  "React-Query",
+  "Tailwindcss",
+  "Framer Motion",
+  "Recoil",
+  "Zustand",
   "Git",
   "Github",
-  "Tailwindcss",
   "Prisma",
   "SQLite",
-  "Recoil",
-  "Redux",
-  "Zustand",
-  "React-Query",
-  "Framer Motion",
   "Firebase",
+  "Vercel",
+  "Notion",
+  "Slack",
 ] as const;
 
 export const experiencesData = [

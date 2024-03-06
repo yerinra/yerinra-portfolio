@@ -64,8 +64,9 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        안녕하세요! 프론트엔드 개발자 라예린입니다. 타입스크립트와 리액트를 주로
-        사용합니다. 요즘에는 Next.js에 푹 빠져있습니다.
+        안녕하세요! 사용자의 편안한 웹경험을 고민하는 프론트엔드 개발자
+        <span className="font-bold"> 라예린</span>입니다. 웹을 통해 사용자와
+        소통하는 순간을 기대하고 있어요.
       </motion.h1>
       <motion.div
         className="flex flex-col sm:flex-row justify-center items-center gap-4 px-4 text-lg"
@@ -81,7 +82,7 @@ export default function Intro() {
             setTimeOfLastClick(Date.now());
           }}
         >
-          Contact me here{" "}
+          Contact me{" "}
           <ArrowRightIcon className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
 
@@ -90,7 +91,7 @@ export default function Intro() {
           className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110  active:scale-105 transition borerBlack dark:bg-white/10 dark:text-white/60"
           download
         >
-          Download Resume{" "}
+          이력서 다운로드{" "}
           <DownloadIcon className="opacity-70 group-hover:translate-y-1 transition focus:scale-110 hover:scale-110  active:scale-105 borerBlack" />
         </a>
         <a

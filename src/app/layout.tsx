@@ -10,7 +10,7 @@ import ThemeSwitch from "@/components/theme-switch";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "yerin ra | Personal Portfolio",
+  title: "yerin ra | Portfolio",
   description: "This is yerin ra's personal portfolio website.",
 };
 
