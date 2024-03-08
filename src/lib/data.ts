@@ -31,7 +31,7 @@ export const projectsData = [
   {
     title: "bookshelf",
     description:
-      "태그 별로 책들을 분류할 수 있는 온라인 책장 사이트입니다. 개인 프로젝트로 진행하였습니다.",
+      "책 읽는 사람들을 위한, 온라인 책장 사이트입니다. 읽은 책에 해시태그를 달아서 분류하고 모든 책을 한 눈에 볼 수 있습니다.",
     tags: ["React", "TypeScript", "Tailwind", "Firebase"],
     githubUrl: "",
     siteUrl: "",
