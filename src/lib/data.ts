@@ -33,10 +33,8 @@ export const projectsData = [
     description:
       "책 읽는 사람들을 위한, 온라인 책장 사이트입니다. 읽은 책에 해시태그를 달아서 분류하고 모든 책을 한 눈에 볼 수 있습니다.",
     tags: ["React", "TypeScript", "Tailwind", "Firebase"],
-    githubUrl: "",
-    siteUrl: "",
-    imageUrl:
-      "https://images.unsplash.com/photo-1708236361901-4b4e584a6baa?q=80&w=2232&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    siteUrl: "https://bookshelf-bay.vercel.app/",
+    imageUrl: "/bookshelf-main.png",
   },
   {
     title: "yerin-blog",

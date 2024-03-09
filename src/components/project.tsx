@@ -5,6 +5,7 @@ import { useRef } from "react";
 import { motion } from "framer-motion";
 import { Link1Icon } from "@radix-ui/react-icons";
 import Link from "next/link";
+import { ReadMe } from "./readme";
 
 type ProjectProp = (typeof projectsData)[number];
 
@@ -13,6 +14,7 @@ export default function Project({
   description,
   tags,
   imageUrl,
+  siteUrl,
 }: ProjectProp) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -29,13 +31,14 @@ export default function Project({
     >
       <section className="group bg-gray-100 max-w-[42rem] border border-black/5 overflow-hidden rounded-lg sm:pr-8 relative sm:h-[20rem] hover:bg-gray-200 dark:bg-white/10 dark:hover:bg-white/20 dark:text-white">
         <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full">
-          <Link href={`/projects/${title}`} className="flex hover:underline">
+          <Link href={siteUrl} className="flex hover:underline">
             <h3 className="text-2xl font-semibold">{title}</h3>
             <Link1Icon className="mt-auto ml-1" />
           </Link>
           <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
             {description}
           </p>
+          <ReadMe project={title} />
           <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
             {tags.map((tag, index) => (
               <li
